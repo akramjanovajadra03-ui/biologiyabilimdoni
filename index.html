@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biologiya bilimdoni | Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="neon-line line-top"></div>
+  <div class="neon-line line-bottom"></div>
+
+  <main class="container">
+
+    <header class="header">
+      <div class="logo">BIO<span>TEST</span></div>
+      <p>BIOLOGIYA BILIMDONI</p>
+    </header>
+
+    <section id="startScreen" class="panel">
+      <h1>Bilimingizni sinab ko‘ring!</h1>
+      <p class="subtitle">Biologiya fanidan bilimlar bellashuvi</p>
+
+      <label>Ism va familiyangiz</label>
+      <input type="text" id="studentName" placeholder="Ism va familiyangizni kiriting">
+
+      <label>Test darajasini tanlang</label>
+      <div class="levels">
+        <button class="level active" data-level="easy">OSON</button>
+        <button class="level" data-level="medium">O‘RTA</button>
+        <button class="level" data-level="hard">QIYIN</button>
+      </div>
+
+      <button id="startBtn" class="main-btn">TESTNI BOSHLASH</button>
+      <p class="info">10 ta savol · 20 soniya · 4 ta javob</p>
+    </section>
+
+    <section id="quizScreen" class="panel hidden">
+      <div class="quiz-top">
+        <span id="questionNumber">1 / 10</span>
+        <span id="timer">20</span>
+      </div>
+
+      <div class="progress">
+        <div id="progressBar"></div>
+      </div>
+
+      <h2 id="questionText">Savol</h2>
+
+      <div id="answers" class="answers"></div>
+
+      <p id="feedback"></p>
+    </section>
+
+    <section id="resultScreen" class="panel hidden">
+      <h1>TEST YAKUNLANDI!</h1>
+      <p id="studentResult" class="student-result"></p>
+
+      <div class="score-box">
+        <div>
+          <span id="score">0</span>
+          <small>Ball</small>
+        </div>
+        <div>
+          <span id="correctCount">0</span>
+          <small>To‘g‘ri</small>
+        </div>
+        <div>
+          <span id="wrongCount">0</span>
+          <small>Noto‘g‘ri</small>
+        </div>
+      </div>
+
+      <p id="levelResult" class="level-result"></p>
+      <h2 class="review-title">TEST JAVOBLARI TAHLILI</h2>
+      <div id="answerReview" class="answer-review"></div>
+
+      <button onclick="location.reload()" class="main-btn">
+        QAYTA TEST TOPSHIRISH
+      </button>
+    </section>
+
+    <footer>
+      Loyiha muallifi: <strong>AKRAMJONOVA JADRA MARATOVNA</strong>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
